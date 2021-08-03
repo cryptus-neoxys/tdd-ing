@@ -3,9 +3,9 @@ package main
 func Sum(arr [5]int) int {
 	sum := 0
 
-	for i := 0; i < 5; i++ {
-		sum += arr[i]
+	for _, number := range arr {
+		sum += number
 	}
 
-    return sum
+	return sum
 }
