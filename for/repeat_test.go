@@ -3,7 +3,7 @@ package iteration
 import "testing"
 
 func TestRepeat(t *testing.T) {
-	got := repeat("a")
+	got := repeat("a", 5)
 	want := "aaaaa"
 
 	if got != want {
@@ -13,6 +13,6 @@ func TestRepeat(t *testing.T) {
 
 func BenchmarkRepeat(b *testing.B) {
 	for i := 0; i < b.N; i++ {
-		repeat("a")
+		repeat("a", 5)
 	}
 }
