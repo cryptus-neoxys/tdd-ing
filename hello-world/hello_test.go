@@ -3,10 +3,10 @@ package main
 import "testing"
 
 func TestHello(t *testing.T) {
-	
-	assertCorrectMessage := func (t testing.TB, got, want string) {
+
+	assertCorrectMessage := func(t testing.TB, got, want string) {
 		t.Helper()
-		
+
 		if want != got {
 			t.Errorf("got %q, want %q", got, want)
 		}
@@ -25,16 +25,16 @@ func TestHello(t *testing.T) {
 
 		assertCorrectMessage(t, got, want)
 	})
-	
-    t.Run("in Spanish", func(t *testing.T) {
-        got := Hello("Elodie", spanish)
-        want := "Hola, Elodie"
-        assertCorrectMessage(t, got, want)
-    })
-	
-    t.Run("in French", func(t *testing.T) {
-        got := Hello("Mademoiselle", french)
-        want := "Bonjour, Mademoiselle"
-        assertCorrectMessage(t, got, want)
-    })
+
+	t.Run("in Spanish", func(t *testing.T) {
+		got := Hello("Elodie", spanish)
+		want := "Hola, Elodie"
+		assertCorrectMessage(t, got, want)
+	})
+
+	t.Run("in French", func(t *testing.T) {
+		got := Hello("Mademoiselle", french)
+		want := "Bonjour, Mademoiselle"
+		assertCorrectMessage(t, got, want)
+	})
 }
