@@ -11,7 +11,7 @@ func Sum(arr []int) int {
 }
 
 func SumAll(numbersToSum ...[]int) (sums []int) {
-	
+
 	for _, numbers := range numbersToSum {
 		sums = append(sums, Sum(numbers))
 	}
@@ -20,7 +20,7 @@ func SumAll(numbersToSum ...[]int) (sums []int) {
 }
 
 func SumAllTails(numbersToSum ...[]int) (sums []int) {
-	
+
 	for _, numbers := range numbersToSum {
 		if len(numbers) == 0 {
 			sums = append(sums, 0)
